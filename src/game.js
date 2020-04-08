@@ -1,6 +1,6 @@
-const Asteroid = require('./asteroid.js');
-const Ship = require('./ship');
-const Bullet = require('./bullet.js');
+import Asteroid from "./asteroid.js"
+import Ship from "./ship.js";
+import Bullet from './bullet.js';
 
 function Game(){
     this.asteroids = [];
@@ -100,4 +100,4 @@ Game.prototype.isOutOfBounds = function(pos) {
 }
 
 
-module.exports = Game;
+export default Game;

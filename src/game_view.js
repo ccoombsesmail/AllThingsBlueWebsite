@@ -1,4 +1,4 @@
-const Game = require("./game.js");
+import Game from "./game.js"
 const key = require("./keymaster.js");
 
 function GameView(ctx, imageCtx){
@@ -41,8 +41,7 @@ GameView.prototype.bindKeyHandlers = function() {
 }
 
 
-module.exports = GameView;
-
+export default GameView;
 
 
 

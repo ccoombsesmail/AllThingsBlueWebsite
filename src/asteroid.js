@@ -1,7 +1,7 @@
+import MovingObject from "./moving_object.js"
+import Ship from "./ship.js";
+import Bullet from './bullet.js';
 const Util = require("./util.js");
-const MovingObject = require("./moving_object.js");
-const Ship = require("./ship.js");
-const Bullet = require('./bullet.js');
 
 
 function Asteroid(options) {
@@ -32,17 +32,6 @@ Asteroid.prototype.collideWith = function(otherObject){
 }
 
 
-module.exports = Asteroid;
+export default Asteroid;
 
 
-
-// function Random(a) {
-//     this.prop = a;
-// }
-
-
-// let p = new Random("one");
-// let p2 = new Random("two");
-// let p3 = new Random("three");
-
-// console.log(p instanceof Random)

@@ -1,11 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-const MovingObject = require("./moving_object.js");
-const Asteroid = require("./asteroid.js");
-const Game = require("./game.js");
-const GameView = require("./game_view.js");
-const Ship = require("./ship.js");
+import GameView from "./game_view.js";
 
 
 function App() {

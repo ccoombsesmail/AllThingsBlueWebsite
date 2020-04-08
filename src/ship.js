@@ -1,6 +1,6 @@
+import MovingObject from "./moving_object.js"
+import Bullet from './bullet.js';
 const Util = require('./util.js');
-const MovingObject = require('./moving_object');
-const Bullet = require('./bullet.js');
 
 function Ship(options){
     options['vel'] = [0, 0];
@@ -30,5 +30,4 @@ Ship.prototype.fireBullet = function() {
     this.game.bullets.push(b);
 }
 
-module.exports = Ship;
-
+export default Ship;
