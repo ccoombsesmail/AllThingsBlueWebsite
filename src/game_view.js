@@ -36,6 +36,10 @@ GameView.prototype.bindKeyHandlers = function() {
     key("d", () => {this.game.ship.power([3, 0])})
     key("w", () => this.game.ship.power([0, -3]))
     key("s", () => this.game.ship.power([0, 3]))
+    key("left", () => { this.game.ship.power([-3, 0]) });
+    key("right", () => { this.game.ship.power([3, 0]) })
+    key("up", () => this.game.ship.power([0, -3]))
+    key("down", () => this.game.ship.power([0, 3]))
     key("space", () => this.game.ship.fireBullet())
 
 }
