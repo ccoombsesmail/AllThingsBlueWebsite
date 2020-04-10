@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
-import GameView from "./game_view.js";
-
+import GameView from "./Components/GameView/game_view.js";
+import { Button } from '@material-ui/core';
+import {Link} from "react-router-dom";
 
 function App() {
 
@@ -25,10 +26,29 @@ function App() {
 
   });
 
+  const styles = {
+    enterButton: {
+      color: "white",
+      // position: 'absolute',
+      // bottom: '9vh',
+      fontSize: "40px",
+    },
+    link: {
+      marginTop: '40px',
+      // padding: '0',
+      // bottom: "9vh"
+    }, 
+
+
+  }
+
   return (
     <div className="App">
+      <div className = "canvas-wrapper"> 
       <canvas id="image-canvas"></canvas>
       <canvas id="game-canvas"></canvas>
+      </div>
+      <Link style = {styles.link} to="/home"> <Button style={styles.enterButton}> ENTER SITE</Button></Link>
     </div>
   );
 }
