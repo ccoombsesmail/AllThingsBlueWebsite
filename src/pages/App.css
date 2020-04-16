@@ -71,4 +71,25 @@ background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 47%, rgba(88
 
 
 
+@media (max-width:780px) {
+  .App {
+    background: black;
+  }
+  
+ #image-canvas {
+   
+    border-radius: 0px;
+    /* width: 1000px;
+    height: 600px; */
 
+
+    } 
+
+#game-canvas {
+ 
+  border-radius: 0px;
+  /* width: 1000px;
+  height: 600px; */
+}
+
+}

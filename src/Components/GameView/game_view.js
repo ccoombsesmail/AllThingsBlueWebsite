@@ -20,7 +20,7 @@ GameView.prototype.start = function(){
         img.src = "cat768.png"
     }else {
 
-        img.src = window.innerWidth < 1024 ? "cat364.png" : "cat.png"
+        img.src = window.innerWidth < 1024 ? "cat264.png" : "cat.png"
     }
     img.width = this.game.width;
     img.height = this.game.height;
@@ -30,8 +30,14 @@ GameView.prototype.start = function(){
         this.game.step();
         this.game.draw(this.ctx)
         this.imageCtx.globalAlpha = 0.1;
-        this.imageCtx.drawImage(img, 0, 0);
 
+        if (window.innerWidth < 1200) {
+            this.imageCtx.drawImage(img, -120, -80);
+        } else if (window.innerWidth < 1600){
+            this.imageCtx.drawImage(img, -50, -20);
+        }else {
+        this.imageCtx.drawImage(img, 0, 0);
+        }
 
     }, 20)
 

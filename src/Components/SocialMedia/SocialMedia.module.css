@@ -16,7 +16,8 @@ strong {
     justify-content: center;
     margin: 0;
     padding: 0;
-    margin-top: 50px
+    margin-top: 50px;
+    max-width: 90vw;
 }
 
 
@@ -25,9 +26,18 @@ strong {
     list-style: none;
 }
 
+
+
 @media (max-width:780px) {
     strong {
         font-size: 2em;
+    }
+
+    .contact {
+         font-size: 2em;
+    }
+    .email{
+         font-size: 1em;
     }
 
 }
