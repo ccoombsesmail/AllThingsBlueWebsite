@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from "./MainImage.module.css"
-const img = require("../../images/atbBanner.jpg")
+const img = require("../../images/atbBanner2.jpg")
 
 class MainImage extends Component {
 
