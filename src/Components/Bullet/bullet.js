@@ -1,5 +1,5 @@
 import MovingObject from "../MovingObject/moving_object.js"
-const Util = require('../../util.js');
+const Util = require('../Util/util.js');
 
 
 function Bullet(options) {

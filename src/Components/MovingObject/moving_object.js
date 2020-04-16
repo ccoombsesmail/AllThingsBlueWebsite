@@ -10,12 +10,12 @@ function MovingObject(options){
 MovingObject.isWrappable = true;
 
 MovingObject.prototype.draw = function(ctx){
-    var grd = ctx.createLinearGradient(this.pos[0] - this.radius, this.pos[1] - this.radius, this.pos[0] - this.radius, this.pos[1] + this.radius);
-    grd.addColorStop(0, " #21d190");
-    grd.addColorStop(1, "#d65bca");
+    // var grd = ctx.createLinearGradient(this.pos[0] - this.radius, this.pos[1] - this.radius, this.pos[0] - this.radius, this.pos[1] + this.radius);
+    // grd.addColorStop(0, " #21d190");
+    // grd.addColorStop(1, "#d65bca");
     ctx.beginPath();
     ctx.arc(this.pos[0], this.pos[1], this.radius, 0, Math.PI*2, true);
-    ctx.fillStyle = grd;
+    ctx.fillStyle = "grey";
     ctx.fill();
     ctx.lineWidth = 2;
     ctx.stroke()

@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-import App from './App';
-import Home from './Home'
+import App from './pages/App';
+import Home from './pages/Home'
 
 // import browserHistory from 'history/createBrowserHistory'
 // import { Router, Route, Link, IndexRoute, Switch } from 'react-router'
@@ -17,12 +17,7 @@ import {
 } from "react-router-dom";
 
 ReactDOM.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
-  // <Router history={browserHistory}>
   <Router>
-    {/* <Link to="/home">Home</Link> */}
     <Switch>
       <Route path="/home">
         <Home />
@@ -32,8 +27,6 @@ ReactDOM.render(
       </Route>
     </Switch>
 
-      {/* <Route path="home" component={Home} /> */}
-    {/* </Route> */}
   </Router>,
   document.getElementById('root')
 );

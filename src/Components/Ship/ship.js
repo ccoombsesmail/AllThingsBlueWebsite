@@ -1,16 +1,16 @@
 import MovingObject from "../MovingObject/moving_object.js"
 import Bullet from '../Bullet/bullet.js';
-const Util = require('../../util.js');
+const Util = require('../Util/util.js');
 
 function Ship(options){
     this.angle = 0;
     options['vel'] = [0, 0];
-    options['radius'] = Ship.RADIUS;
+    // options['radius'] = Ship.RADIUS;
     options['color'] = Ship.COLOR;
     MovingObject.call(this, options);
 }
 
-Ship.RADIUS = 15;
+// Ship.RADIUS = 15;
 Ship.COLOR = "#08F7FE";
 
 Util.inherits(Ship, MovingObject)

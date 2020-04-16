@@ -1,8 +1,8 @@
 import Game from "../Game/game.js"
 const key = require("../../keymaster.js");
 
-function GameView(ctx, imageCtx){
-    this.game = new Game();
+function GameView(ctx, imageCtx, width, height){
+    this.game = new Game(width, height);
     this.ctx = ctx;
     this.imageCtx = imageCtx
 }
@@ -13,11 +13,17 @@ GameView.prototype.start = function(){
 
     const img = new Image();
     img.onload = () => {
-        this.imageCtx.drawImage(img, 300, 300);
+        this.imageCtx.drawImage(img, 0, 0);
     };
-    img.src = "cat.png";
-    img.width = 1000;
-    img.height = 2000;
+
+    if (window.innerWidth < 1600 ) {
+        img.src = "cat768.png"
+    }else {
+
+        img.src = window.innerWidth < 1024 ? "cat364.png" : "cat.png"
+    }
+    img.width = this.game.width;
+    img.height = this.game.height;
 
     this.bindKeyHandlers();
     window.setInterval(() => {

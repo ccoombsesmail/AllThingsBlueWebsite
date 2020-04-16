@@ -22,3 +22,14 @@
     margin-right: 100px
 }
 
+
+
+@media (max-width:780px) { 
+    .leftNav {
+         margin-left: 10px;
+    }
+    .rightNav {
+    display: flex;
+    margin-right: 10px
+}
+}
