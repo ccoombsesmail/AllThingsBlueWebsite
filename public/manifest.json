@@ -1,7 +1,7 @@
 {
   "short_name": "All Things Blue",
   "name": "All Things Blue Website",
-  "start_url": "https://allthingsblue.io",
+  "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
