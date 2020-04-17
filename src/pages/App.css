@@ -19,6 +19,7 @@ a {
   background: rgb(0,0,0);
 background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 47%, rgba(88,91,232,1) 78%, rgba(141,88,232,1) 89%, rgba(137,70,252,1) 100%);
   /* background: url("../images/double-cat.png") no-repeat; */
+  overflow-y: hidden;
 }
 
  #image-canvas {
@@ -28,6 +29,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 47%, rgba(88
     border-radius: 300px;
     /* width: 1000px;
     height: 600px; */
+  overflow-y: hidden;
 
 
     } 
@@ -39,6 +41,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 47%, rgba(88
   border-radius: 300px;
   /* width: 1000px;
   height: 600px; */
+  overflow-y: hidden;
 
 }
 
@@ -52,6 +55,7 @@ background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 47%, rgba(88
    justify-content: center; */
     /* width: 1000px;
     height: 600px; */
+  overflow-y: hidden;
 
 } 
 

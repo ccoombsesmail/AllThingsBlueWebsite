@@ -19,7 +19,8 @@ function App() {
 
 
     if (window.innerWidth < 1024) {
-      imageCanvas.width = window.innerWidth;
+      // imageCanvas.width = window.innerWidth;
+      imageCanvas.width = document.documentElement.clientWidth;
       imageCanvas.height = window.innerWidth/2;
 
       gameCanvas.width = imageCanvas.width

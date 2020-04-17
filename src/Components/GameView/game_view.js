@@ -31,10 +31,14 @@ GameView.prototype.start = function(){
         this.game.draw(this.ctx)
         this.imageCtx.globalAlpha = 0.1;
 
-        if (window.innerWidth < 1200) {
-            this.imageCtx.drawImage(img, -120, -80);
-        } else if (window.innerWidth < 1600){
-            this.imageCtx.drawImage(img, -50, -20);
+        if (window.innerWidth < 400) {
+            this.imageCtx.drawImage(img, -(document.documentElement.clientWidth/2), -80);
+        } else if (window.innerWidth < 600) {
+            this.imageCtx.drawImage(img, -(document.documentElement.clientWidth / 2.7), -80)
+        } else if (window.innerWidth < 1400){
+            this.imageCtx.drawImage(img, -20, 0);
+        } else if (window.innerWidth < 1600) {
+            this.imageCtx.drawImage(img, 20, 0);
         }else {
         this.imageCtx.drawImage(img, 0, 0);
         }

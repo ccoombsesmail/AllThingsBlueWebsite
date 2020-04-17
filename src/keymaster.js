@@ -46,7 +46,7 @@
 
         // for comparing mods before unassignment
         function compareArray(a1, a2) {
-            if (a1.length != a2.length) return false;
+            if (a1.length !== a2.length) return false;
             for (var i = 0; i < a1.length; i++) {
                 if (a1[i] !== a2[i]) return false;
             }
@@ -68,16 +68,16 @@
             var key, handler, k, i, modifiersMatch, scope;
             key = event.keyCode;
 
-            if (index(_downKeys, key) == -1) {
+            if (index(_downKeys, key) === -1) {
                 _downKeys.push(key);
             }
 
             // if a modifier key, set the key.<modifierkeyname> property to true and return
-            if (key == 93 || key == 224) key = 91; // right command on webkit, command on Gecko
+            if (key === 93 || key === 224) key = 91; // right command on webkit, command on Gecko
             if (key in _mods) {
                 _mods[key] = true;
                 // 'assignKey' from inside this closure is exported to window.key
-                for (k in _MODIFIERS) if (_MODIFIERS[k] == key) assignKey[k] = true;
+                for (k in _MODIFIERS) if (_MODIFIERS[k] === key) assignKey[k] = true;
                 return;
             }
             updateModifierKey(event);
@@ -96,14 +96,14 @@
                 handler = _handlers[key][i];
 
                 // see if it's in the current scope
-                if (handler.scope == scope || handler.scope == 'all') {
+                if (handler.scope === scope || handler.scope === 'all') {
                     // check if modifiers match if any
                     modifiersMatch = handler.mods.length > 0;
                     for (k in _mods)
                         if ((!_mods[k] && index(handler.mods, +k) > -1) ||
-                            (_mods[k] && index(handler.mods, +k) == -1)) modifiersMatch = false;
+                            (_mods[k] && index(handler.mods, +k) === -1)) modifiersMatch = false;
                     // call the handler and stop the event if neccessary
-                    if ((handler.mods.length == 0 && !_mods[16] && !_mods[18] && !_mods[17] && !_mods[91]) || modifiersMatch) {
+                    if ((handler.mods.length === 0 && !_mods[16] && !_mods[18] && !_mods[17] && !_mods[91]) || modifiersMatch) {
                         if (handler.method(event, handler) === false) {
                             if (event.preventDefault) event.preventDefault();
                             else event.returnValue = false;
