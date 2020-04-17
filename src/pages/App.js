@@ -14,6 +14,7 @@ class App extends React.Component {
       indexPage: true,
     }
   }
+  
 
 
   changeContent() {
@@ -22,6 +23,9 @@ class App extends React.Component {
 
 
   render() {
+    $(window).on('beforeunload', function () {
+      $(window).scrollTop(0);
+    });
 
  
   window.addEventListener('resize', handleResize)

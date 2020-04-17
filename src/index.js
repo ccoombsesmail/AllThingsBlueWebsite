@@ -6,7 +6,6 @@ import Home from './pages/Home'
 import { createMemoryHistory } from "history";
 import { Route, Router, Switch } from "react-router-dom";
 
-
 let hist = createMemoryHistory();
 
 ReactDOM.render(

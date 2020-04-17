@@ -1,6 +1,7 @@
 #root{
   z-index: -999999999;
   overscroll-behavior: none;
+  overflow-y:hidden;
 }
 
 a {
@@ -10,11 +11,12 @@ a {
 
 .home {
   overscroll-behavior: none;
-
+overflow-y:hidden;
 }
 
 .App {
     overscroll-behavior: none;
+    overflow-y:hidden;
 
   width: 100vw;
   height: 100vh;

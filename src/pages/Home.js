@@ -3,10 +3,13 @@ import './App.css';
 import AppBar from "../Components/AppBar/AppBar.jsx";
 import MainImage from "../Components/MainImage/MainImage.jsx";
 import SocialMedia from '../Components/SocialMedia/SocialMedia';
+import $ from "jquery";
 
 function Home() {
 
-
+    $(window).on('beforeunload', function () {
+        $(window).scrollTop(0);
+    });
     return (
         <div className = "Home" >
 
