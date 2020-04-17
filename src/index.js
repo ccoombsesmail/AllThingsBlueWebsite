@@ -10,14 +10,15 @@ import { Route, Router, Switch } from "react-router-dom";
 let hist = createMemoryHistory();
 
 ReactDOM.render(
-  <Router history={hist}>
-    <Switch>
+  // <Router history={hist}>
+  //   <Switch>
 
-      <Route path="/home" component={Home} />
-      <Route path="/" component={App} />
+  //     <Route path="/home" component={Home} />
+  //     <Route path="/" component={App} />
 
-    </Switch>
-  </Router>,
+  //   </Switch>
+  // </Router>,
+  <App></App>,
   document.getElementById('root')
 );
 

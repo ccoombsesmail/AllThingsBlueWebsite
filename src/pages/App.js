@@ -4,9 +4,26 @@ import GameView from "../Components/GameView/game_view.js";
 import { Button } from '@material-ui/core';
 import {Link} from "react-router-dom";
 import $ from "jquery";
+import Home from "./Home"
 
-function App() {
+class App extends React.Component {
 
+  constructor(){
+    super()
+    this.state = {
+      indexPage: true,
+    }
+  }
+
+
+  changeContent() {
+    this.setState({indexPage: false})
+  }
+
+
+  render() {
+
+ 
   window.addEventListener('resize', handleResize)
 
 
@@ -67,16 +84,29 @@ function App() {
 
   }
 
-  return (
-    <div className="App">
+  let page
+  if (this.state.indexPage === true) {
+    page = <div className="App">
 
-      <section id = "canvas-wrapper"> 
-      <canvas id="image-canvas"></canvas>
-      <canvas id="game-canvas"></canvas>
+      <section id="canvas-wrapper">
+        <canvas id="image-canvas"></canvas>
+        <canvas id="game-canvas"></canvas>
       </section>
-      <Link style = {styles.link} to="/home"> <Button style={styles.enterButton}> ENTER SITE</Button></Link>
+      {/* <Link style = {styles.link} to="/home"> <Button style={styles.enterButton}> ENTER SITE</Button></Link> */}
+      <Button style={styles.enterButton} onClick={this.changeContent.bind(this)} > ENTER SITE</Button>
     </div>
+
+  }else {
+    page = <Home/>
+  }
+
+  return (
+    <>
+    {page}
+     </>
   );
+
+  }
 }
 
 export default App;
