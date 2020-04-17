@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import Home from './Home'
+import App from './pages/App';
+import Home from './pages/Home'
 import { createMemoryHistory } from "history";
 import { Route, Router, Switch } from "react-router-dom";
 
