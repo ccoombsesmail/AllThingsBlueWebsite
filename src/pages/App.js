@@ -84,26 +84,33 @@ class App extends React.Component {
 
   }
 
-  let page
-  if (this.state.indexPage === true) {
-    page = <div className="App">
+  // let page
+  // if (this.state.indexPage === true) {
+  //   page = <div className="App">
+
+  //     <section id="canvas-wrapper">
+  //       <canvas id="image-canvas"></canvas>
+  //       <canvas id="game-canvas"></canvas>
+  //     </section>
+  //     {/* <Link style = {styles.link} to="/home"> <Button style={styles.enterButton}> ENTER SITE</Button></Link> */}
+  //     <Button style={styles.enterButton} onClick={this.changeContent.bind(this)} > ENTER SITE</Button>
+  //   </div>
+
+  // }else {
+  //   page = <Home/>
+  // }
+
+  return (
+    <div className="App">
 
       <section id="canvas-wrapper">
         <canvas id="image-canvas"></canvas>
         <canvas id="game-canvas"></canvas>
       </section>
-      {/* <Link style = {styles.link} to="/home"> <Button style={styles.enterButton}> ENTER SITE</Button></Link> */}
-      <Button style={styles.enterButton} onClick={this.changeContent.bind(this)} > ENTER SITE</Button>
+      <Link style = {styles.link} to="/home"> <Button style={styles.enterButton}> ENTER SITE</Button></Link>
+      {/* onClick={this.changeContent.bind(this)} */}
+      {/* <Button style={styles.enterButton}  > ENTER SITE</Button> */}
     </div>
-
-  }else {
-    page = <Home/>
-  }
-
-  return (
-    <>
-    {page}
-     </>
   );
 
   }

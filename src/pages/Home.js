@@ -8,7 +8,7 @@ function Home() {
 
 
     return (
-        <div >
+        <div className = "Home" >
 
             <AppBar></AppBar>
 
