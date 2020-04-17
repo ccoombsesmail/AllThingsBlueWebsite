@@ -7,9 +7,7 @@ import $ from "jquery";
 
 function Home() {
 
-    $(window).on('beforeunload', function () {
-        $(window).scrollTop(0);
-    });
+  
     return (
         <div className = "Home" >
 

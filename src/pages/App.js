@@ -23,12 +23,9 @@ class App extends React.Component {
 
 
   render() {
-    $(window).on('beforeunload', function () {
-      $(window).scrollTop(0);
-    });
-
+   
  
-  window.addEventListener('resize', handleResize)
+  // window.addEventListener('resize', handleResize)
 
 
   function handleResize(event) {
@@ -67,7 +64,7 @@ class App extends React.Component {
 
   }
 
-  window.onresize = function () { window.location.reload(); }
+  // window.onresize = function () { window.location.reload(); }
 
   window.addEventListener("DOMContentLoaded", handleResize)
   
