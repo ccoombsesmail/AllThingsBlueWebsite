@@ -108,7 +108,7 @@ class App extends React.Component {
         <canvas id="image-canvas"></canvas>
         <canvas id="game-canvas"></canvas>
       </section>
-      <Link style = {styles.link} to="/home"> <Button style={styles.enterButton}> ENTER SITE</Button></Link>
+      <Link style = {styles.link} to="/home"> <Button style={styles.enterButton}>ENTER SITE</Button></Link>
       {/* onClick={this.changeContent.bind(this)} */}
       {/* <Button style={styles.enterButton}  > ENTER SITE</Button> */}
     </div>

@@ -1,4 +1,141 @@
 .image {
-    width: 100%;
+    width: 55vw;
     height: auto;
+}
+
+.imageWrapper {
+
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.leftSection > iframe {
+    width: 40vw;
+    height: 30vw;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.spotify {
+    width: 30vw;
+    height: 10vw !important;
+}
+.leftSection > h1 {
+
+    text-transform: uppercase;
+}
+
+.leftSection {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.neon {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: white;
+    filter: brightness(200%);
+    margin-top: 20px;
+}
+
+.text {
+    background-color: black;
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    user-select: none;
+    border-radius: 10px;
+}
+
+.text::before {
+    content: attr(data-text);
+    position: absolute;
+    color: white;
+    filter: blur(0.02em);
+    mix-blend-mode: difference;
+}
+
+.gradient {
+    position: absolute;
+    border-radius: 10px;
+
+    background: linear-gradient(45deg, rgb(0, 174, 255), rgb(0, 110, 255), lightgreen, rgb(174, 0, 255), rgb(153, 0, 255));
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    mix-blend-mode: multiply;
+}
+
+.spotlight {
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(
+            circle,
+            white,
+            transparent 25%
+        ) center / 25% 25%,
+        radial-gradient(
+            circle,
+            white,
+            black 25%
+        ) center / 12.5% 12.5%;
+    animation: light 5s ease-in-out infinite;
+    animation-direction: alternate;
+    mix-blend-mode: color-dodge;
+}
+
+@keyframes light {
+    to {
+        transform: translate(50%, 50%);
+    }
+}
+
+.arrow {
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .neon {
+  }
+
+  .text {
+      font-size: 2.1rem;
+
+  }
+
+  .imageWrapper {
+
+  flex-direction: column;
+  align-items: center;
+}
+.image {
+    width: 100vw
+}
+
+.leftSection > iframe {
+    width: 80vw;
+    height: 20vh;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.spotify {
+     width: 80vw;
+    height: 13vh !important;
+}
 }
