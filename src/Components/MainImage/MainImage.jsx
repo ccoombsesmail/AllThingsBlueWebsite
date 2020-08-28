@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classes from "./MainImage.module.css"
 import { FaArrowDown } from 'react-icons/fa';
-const img = require("../../images/dickingAround.jpg")
+const img = require("../../images/newtunes.JPG")
 
 class MainImage extends Component {
 
